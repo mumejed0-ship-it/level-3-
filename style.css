@@ -1,0 +1,94 @@
+* { box-sizing: border-box; }
+:root {
+     --ink: white; --muted: rgb(212, 209, 209); --panel: rgb(10, 10, 10); 
+}
+body {
+     min-width: 320px; min-height: 100vh; margin: 0; color: var(--ink); font-family: "DM Sans", sans-serif; background: radial-gradient(circle at 25% 18%, #67318d 0, transparent 38%), linear-gradient(135deg, #172d73 0%, #352268 52%, #a52c78 100%);
+     }
+.profile-stage {
+     display: grid; min-height: 100vh; padding: 48px 24px; place-items: center;
+     }
+.profile-card {
+     width: min(100%, 474px); overflow: hidden; border: 1px solid rgba(255,255,255,.3); border-radius: 22px; background: var(--panel); box-shadow: 0 24px 55px rgba(7,6,31,.43); transition: transform .45s ease, box-shadow .45s ease;
+     }
+.profile-card:hover, .profile-card:focus {
+     transform: translateY(-8px); box-shadow: 0 32px 70px rgba(8,3,39,.58); }.profile-card:focus-visible { outline: 3px solid #ff7cd3; outline-offset: 5px;
+     }
+.card-art {
+     position: relative; height: 294px; background: radial-gradient(circle at 16% 20%, rgba(255,91,180,.8), transparent 38%), linear-gradient(135deg, #f02ca2 0%, #653fe7 56%, #2183ee 100%); 
+    }
+.card-art::after { 
+    content: ""; position: absolute; inset: 175px -10% -70px; border-radius: 50% 50% 0 0; background: var(--panel); transform: rotate(-7deg);
+ }
+.avatar {
+     position: absolute; z-index: 2; top: 27px; left: 50%; width: 190px; height: 190px; transform: translateX(-50%); border: 7px solid #bb5cff; border-radius: 50%; background: url("photo_2026-08-24_19-37-00.jpg") 69% 22% / 530% auto; box-shadow: 0 0 0 3px rgba(255,123,216,.35), 0 10px 30px rgba(8,4,35,.35);
+     }
+.art-dot {
+     position: absolute; z-index: 1; display: block; border-radius: 50%; background: rgba(255,177,224,.25); 
+    }
+.dot-one { 
+    top: 88px; left: 42px; width: 48px; height: 48px; 
+}.dot-two { 
+    top: 204px; left: 35px; width: 34px; height: 34px; 
+}.menu-dots {
+     position: absolute; z-index: 3; top: 31px; right: 27px; display: grid; gap: 5px;
+     }
+.menu-dots i {
+     width: 6px; height: 6px; border-radius: 50%; background: white;
+    }
+.profile-content {
+     position: relative; z-index: 3; padding: 0 36px 30px; text-align: center;
+     } 
+h1 {
+     margin: -1px 0 3px; font-size: 34px; line-height: 1.15;
+     }
+.role {
+     margin: 0; color: #f76ac4; font-size: 20px;
+     }
+.bio { margin: 23px 0 25px; color: var(--muted); font-size: 17px; line-height: 1.65; }
+.socials {
+     display: flex; justify-content: center; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.19);
+     }
+.socials a { 
+    display: grid; width: 46px; height: 46px; color: white; border: 1px solid rgba(74,137,255,.55); border-radius: 50%; background: #1a3d88; place-items: center; font-size: 21px; text-decoration: none; transition: transform .2s, background .2s;
+ }
+.socials a:hover {
+     transform: translateY(-3px); background: #ed319d; 
+    }
+.details { 
+    margin-top: 22px; overflow: hidden; text-align: left; border: 1px solid rgba(255,255,255,.12); border-radius: 15px; background: rgba(39,41,78,.55);
+ }
+.details div {
+     display: flex; align-items: center; gap: 21px; padding: 13px 24px; 
+    }
+.details div + div {
+     border-top: 1px solid rgba(255,255,255,.12); 
+    }
+.details i {
+     width: 22px; color: #ed54d0; text-align: center; font-size: 23px;
+     }
+.details p {
+     margin: 0; color: var(--muted); font-size: 15px;
+     }
+.details span {
+     display: block; color: white; font-size: 17px;
+     }
+.profile-action {
+     width: 70%; margin-top: 25px; padding: 13px 20px; color: white; border: 0; border-radius: 28px; background: linear-gradient(100deg, #f02da4, #267df2); font: inherit; font-size: 18px; cursor: pointer; transition: filter .2s, transform .2s;
+    }
+.profile-action:hover {
+     filter: brightness(1.15); transform: scale(1.03);
+     }
+@media (max-width: 520px) { .profile-stage { padding: 24px 14px; }.profile-content { padding-inline: 22px; } h1 { font-size: 29px; }.socials { gap: 10px; }.socials a { width: 42px; height: 42px; }.compact-break { display: none; } }
+.profile-action a{
+    text-decoration: none;
+}
+.january{
+    text-decoration: none;
+}
+.adama{
+    text-decoration: none;
+}
+.example{
+    text-decoration: none;
+}
